@@ -2,7 +2,6 @@ FROM schickling/s3cmd
 
 COPY s3cfg /root/.s3cfg
 
-COPY docker-entrypoint.sh /s3
+COPY docker-entrypoint.sh /usr/local/bin/
 
-ENTRYPOINT ["/s3/docker-entrypoint.sh"]
-
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
